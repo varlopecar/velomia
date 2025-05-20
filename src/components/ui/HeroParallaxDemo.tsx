@@ -1,4 +1,3 @@
-import React from "react";
 import { HeroParallax } from "./HeroParallax";
 import { products } from "../../data/products";
 

@@ -6,6 +6,7 @@ import React, {
     createContext,
     useContext,
 } from "react";
+import type { ImgHTMLAttributes } from "react";
 import {
     IconArrowNarrowLeft,
     IconArrowNarrowRight,
@@ -182,7 +183,7 @@ export const Card = ({
         return () => window.removeEventListener("keydown", onKeyDown);
     }, [open]);
 
-    useOutsideClick(containerRef, () => handleClose());
+    useOutsideClick(containerRef as React.RefObject<HTMLDivElement>, () => handleClose());
 
     const handleOpen = () => {
         setOpen(true);
@@ -266,6 +267,11 @@ export const Card = ({
     );
 };
 
+interface ExtendedImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+    fill?: boolean;
+    blurDataURL?: string;
+}
+
 export const BlurImage = ({
     height,
     width,
@@ -273,7 +279,7 @@ export const BlurImage = ({
     className,
     alt,
     ...rest
-}: ImgHTMLAttributes<HTMLImageElement>) => {
+}: ExtendedImageProps) => {
     const [isLoading, setLoading] = useState(true);
     return (
         <img

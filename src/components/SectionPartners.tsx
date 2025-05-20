@@ -1,14 +1,10 @@
 import React from 'react';
-import xiamoi from '../../public/images/xiaomi.png';
-import renault from '../../public/images/renault.png';
-import tesla from '../../public/images/tesla.png';
-import kawth from '../../public/images/kn.png';
 
 const partners = [
-    { name: 'Xiamoi', logo: xiamoi },
-    { name: 'Renault', logo: renault },
-    { name: 'Tesla', logo: tesla },
-    { name: 'Kawth', logo: kawth },
+    { name: 'Xiamoi', logo: '/images/xiaomi.png' },
+    { name: 'Renault', logo: '/images/renault.png' },
+    { name: 'Tesla', logo: '/images/tesla.png' },
+    { name: 'Kawth', logo: '/images/kn.png' },
 ];
 
 const SectionPartners: React.FC = () => (

@@ -1,4 +1,3 @@
-import React from 'react'
 import MainLayout from './layouts/MainLayout'
 import SectionMain from './components/SectionMain'
 import SectionOffers from './components/SectionOffers'
